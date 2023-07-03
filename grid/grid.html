@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+    .grid-container {
+        display: grid;
+        gap: 15px;
+        background-color: #e30f0f;
+        padding: 15px;
+        max-width: 800px;
+    }
+        
+    .grid-item {
+        padding: 90px;
+     }
+        
+    .item1 {
+        background: url(./img/image1.jpeg);
+        grid-column: 1  / span 1;
+        grid-row: 1;
+    }
+        
+    .item2 {
+        background: url(./img/image2.jpeg);
+        grid-column: 2;
+        grid-row: 1 / span 1;
+    }
+        
+    .item3 {
+        background: url(./img/image3.jpeg);
+        grid-column: 3;
+        grid-row: 1 / span 1;
+    }
+        
+    .item4 {
+        background: url(./img/image4.jpeg);
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 2;
+    }
+        
+    .item5 {
+        background: url(./img/image5.jpeg);
+        grid-column: 3 / span 1;
+        grid-row: 2;
+    }
+    .item6 {
+        background: url(./img/image6.jpeg);
+        grid-column: 3 / span 1;
+        grid-row: 3;
+    }
+        </style>
+        </head>
+        <body>
+        
+        <div class="grid-container">
+          <div class="grid-item item1"></div>
+          <div class="grid-item item2"></div>
+          <div class="grid-item item3"></div>  
+          <div class="grid-item item4"></div>
+          <div class="grid-item item5"></div>
+          <div class="grid-item item6"></div>
+        </div>
+  </body>
+</html>

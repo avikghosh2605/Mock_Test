@@ -1,0 +1,33 @@
+In JavaScript, an execution context is an abstract concept that helps manage the execution of code. It provides an environment for the code to be executed and keeps track of the variables, functions, and other data that are accessible during runtime. Each time a function is invoked or a script is run, a new execution context is created.
+
+An execution context consists of three main components:
+
+Variable Object: The variable object contains all the variables, function declarations, and function arguments defined within the current scope. It serves as a storage space for these entities. In the case of the global scope, the variable object is known as the global object (e.g., window object in a browser).
+
+Scope Chain: The scope chain is a list of variable objects that are accessible to the current execution context. It determines the visibility and accessibility of variables and functions. The scope chain is formed based on the nested lexical scope (static scope) of functions.
+
+This Value: The "this" value refers to the object that the function is bound to or the object that is currently being operated on. It can vary depending on how a function is invoked.
+
+When code execution starts, an initial global execution context is created. As functions are called or scripts are run, new execution contexts are created and added to the execution context stack, forming a stack-like structure known as the "call stack."
+
+Here is a simplified diagram representing the call stack and execution contexts:
+
+---------------------------------------------------
+|             Execution Context (Global)           |
+|-------------------------------------------------|
+|       Variable Object (VO)                       |
+|       Scope Chain                                |
+|       this Value                                 |
+---------------------------------------------------
+|             Execution Context (Function 2)        |
+|-------------------------------------------------|
+|       Variable Object (VO)                       |
+|       Scope Chain                                |
+|       this Value                                 |
+---------------------------------------------------
+|             Execution Context (Function 1)        |
+|-------------------------------------------------|
+|       Variable Object (VO)                       |
+|       Scope Chain                                |
+|       this Value                                 |
+---------------------------------------------------
